@@ -1,0 +1,7 @@
+{
+  "name": "morderin-web-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
