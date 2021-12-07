@@ -12,10 +12,8 @@
         <p class="error-txt" v-else><em>Loading...</em></p>
       </div>
       <div id="video-list" v-else>
-        <div class="entry-container"  v-for="v in filteredVideos" :key="v" @click="goToVideoPage">
-          <a class="title" href="">
-              {{v.title}}
-          </a>
+        <div class="entry-container"  v-for="v in filteredVideos" :key="v" @click="goToVideoPage(v.englishUrl)">
+          <p class="title">{{v.title}}</p>
           <p class="desc">{{v.description}}</p>
           </div>
         </div>
@@ -24,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { youtubeVideos, getVideosByName } from "@/data/YoutubeTutorialVideos.js"
+import { youtubeVideos, getVideosByName, YoutubeVideoEntry } from "@/data/YoutubeTutorialVideos.js"
 
 export default defineComponent({
   name: "TrainingVidoes",
@@ -38,8 +36,13 @@ export default defineComponent({
     };
   },
   methods: {
-    goToVideoPage() {
-      alert("test");
+    goToVideoPage(url: string) {
+      this.$router.push({
+        name: "WatchVideo",
+        params: {
+          videoUrl: url
+        }
+      });
     }
   },
   watch: {
@@ -98,10 +101,6 @@ a {
   padding-left: 10px;
 }
 
-.title:hover {
-  color: #e0e721;
-}
-
 .desc {
   padding: 0;
   margin: 0;
@@ -117,11 +116,11 @@ a {
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  
+  transition: all 0.2s ease-in-out;
 }
 
 .entry-container:hover {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(87, 87, 87);
 }
 
 .entry-container:first-child {

@@ -26,6 +26,7 @@
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
     "vue-unity-webgl": "^1.2.0",
+    "vue3-youtube": "^0.1.9",
     "vuenity": "^1.1.5",
     "vuex": "^4.0.0-0"
   },

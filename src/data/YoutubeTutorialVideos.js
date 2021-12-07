@@ -1,6 +1,6 @@
 
 
-class YoutubeVideoEntry {
+export class YoutubeVideoEntry {
     constructor(title, description, englishUrl, spanishUrl) {
         this.title = title;
         this.description = description;
@@ -16,7 +16,7 @@ export const youtubeVideos = [
         " and their livelihood. This video will be showing you the core safety" +
         " standards of which Marathon expects all of its employees to conduct on" +
         " every job site.",
-        "https://www.youtube-nocookie.com/embed/Qj5PkIrmHoQ",
+        "https://www.youtube.com/watch?v=Qj5PkIrmHoQ",
         "https://www.youtube-nocookie.com/embed/cxaDNRfRj2Y"),
 
     
