@@ -12,7 +12,7 @@
         <p class="error-txt" v-else><em>Loading...</em></p>
       </div>
       <div id="video-list" v-else>
-        <div class="entry-container"  v-for="v in filteredVideos" :key="v" @click="goToVideoPage(v.englishUrl)">
+        <div class="entry-container"  v-for="v in filteredVideos" :key="v" @click="goToVideoPage(v.title, v.englishUrl)">
           <p class="title">{{v.title}}</p>
           <p class="desc">{{v.description}}</p>
           </div>
@@ -36,10 +36,11 @@ export default defineComponent({
     };
   },
   methods: {
-    goToVideoPage(url: string) {
+    goToVideoPage(title: string, url: string) {
       this.$router.push({
         name: "WatchVideo",
         params: {
+          title: title,
           videoUrl: url
         }
       });

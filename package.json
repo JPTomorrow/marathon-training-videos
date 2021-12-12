@@ -28,7 +28,8 @@
     "vue-unity-webgl": "^1.2.0",
     "vue3-youtube": "^0.1.9",
     "vuenity": "^1.1.5",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "youtube-vue3": "^0.1.10"
   },
   "devDependencies": {
     "@capacitor/cli": "3.3.2",

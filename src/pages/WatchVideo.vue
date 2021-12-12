@@ -1,11 +1,15 @@
 <template>
   <div id="wrapper">
-    <h1 id="title">{{ url }}</h1>
+    <h1 id="title">Title</h1>
 
     <div class="fluidMedia">
         <Youtube 
-            src="{{ url }}" 
+            :src="url"
+            :vars="videoProperties"
+            width="100%" 
             @ready="onReady"
+            @state-change="onStateChanged"
+            @ended="enableGoToTestButton"
             ref="youtube" />
     </div>
 
@@ -19,7 +23,7 @@
             <li>@localizer["TVP_Instruction_Steps_UL4"]</li>
             <li>@localizer["TVP_Instruction_Steps_UL5"]</li>
         </ol>
-        <button id="tvp-test-btn" type="button" class="btn btn-primary" @onclick="GoToTest"
+        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTest"
             disabled>@localizer["TVP_Test_Button"]</button>
     </div>
   </div>
@@ -36,13 +40,36 @@ export default defineComponent({
   },
   data() {
     return {
-        url: this.$route.params.videoUrl // + '?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1',
+        title: this.$route.params.title,
+        url: this.$route.params.videoUrl, // + '?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1',
+        videoProperties: {
+            controls: "1",
+            autoplay: "1",
+            showinfo: "0",
+            disablekb: "1",
+            modestbranding: "1",
+
+        }
     };
   },
   methods: {
     onReady: function() {
-            (this.$refs.youtube as any).playVideo();
+        (this.$refs.youtube as any).playVideo();
     },
+    enableGoToTestButton: function() {
+        alert("enabling");
+        let btn = document.getElementById('test-btn') as HTMLInputElement;
+        if(btn) btn.disabled = false;
+    },
+    onStateChanged: function(event: any) {
+        let state = event.target.playerInfo.playerState as number|undefined;
+        if(state === 0) {
+            this.enableGoToTestButton();
+        }
+    },
+    goToTest: function() {
+        alert("test");
+    }
   },
 });
 </script>
@@ -51,7 +78,6 @@ export default defineComponent({
 #wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
     text-align: center;
 }
 
@@ -62,19 +88,13 @@ export default defineComponent({
 }
 
 .fluidMedia {
-    width: 1022px;
+    width: 50%;
     padding: 0;
-    height: 768px;
     overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-}
-
-.fluidMedia iframe {
-    width: 1024px;
-    height: 768px;
 }
 
 .description {
@@ -97,7 +117,7 @@ export default defineComponent({
     margin-top: 10px;
 }
 
-#tvp-test-btn {
+#test-btn {
     width: 50%;
     margin-top: 50px;
     background-color: transparent;
@@ -105,7 +125,7 @@ export default defineComponent({
     color: #eb1e23;
 }
 
-#tvp-test-btn:hover {
+#test-btn:hover {
     background-color: #eb1e23;
     color: ghostwhite;
 }
