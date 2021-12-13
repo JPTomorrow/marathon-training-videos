@@ -17,9 +17,7 @@ export const youtubeVideos = [
         " standards of which Marathon expects all of its employees to conduct on" +
         " every job site.",
         "https://www.youtube.com/watch?v=Qj5PkIrmHoQ",
-        "https://www.youtube-nocookie.com/embed/cxaDNRfRj2Y"),
-
-    
+        "https://www.youtube-nocookie.com/embed/cxaDNRfRj2Y"),    
 ];
 
 export function getVideosByName(name) {
