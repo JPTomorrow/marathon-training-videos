@@ -1,320 +1,382 @@
 {
-  "New Hire Onboarding Video": {
-    "English": {
-      "Questions": [
-        {
-          "Text": "It is the policy of MEC to ensure that each container of hazardous chemicals on a jobsite is properly labeled:",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
+  "Tests": [
+    {
+      "Title": "New Hire Onboarding Video",
+      "English": {
+        "Questions": [
+          {
+            "Text": "It is the policy of MEC to ensure that each container of hazardous chemicals on a jobsite is properly labeled:",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "The SDS must be updated when new chemicals are brought onto the jobsite and reviewed with employees.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Every __________ has the responsibility and authority to stop work when unsafe conditions, conditions that pose a danger, or any condition that could result in release of hazardous substances without fear of retribution.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Foreman",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Supervisor",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "Employee",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "Vendor",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "LOTO devices will be placed on _______ ______ that must not be operated or have the potential to release energy.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Grounding",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Isolation Points",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "Bonding",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "Energized Circuit",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Employees shall be trained on LOTO procedures prior to being issued a lock and tag.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "No employee shall work on or near live energized circuits _____ Volts or greater without a hot work permit approved by MEC’s President, Bruce Taylor.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "30",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "50",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "120",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "240",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "There is a ZERO tolerance for violating the MEC electrical hot work policy.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "ANSI Z87.1 Safety glasses and prescription safety glasses required 100% of the time.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Each employee on walking/working surface with an unprotected side or edge which is 10’ or more above a lower surface shall be protected from falling by using fall protection.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Marathon Electrical Contractors reserves the right to require any employee to submit to a drug or alcohol test at any time.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "False",
+                "IsCorrect": false
+              }
+            ]
           }
-        },
-        {
-          "Text": "The SDS must be updated when new chemicals are brought onto the jobsite and reviewed with employees.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
+        ]
+      },
+      "Spanish": {
+        "Questions": [
+          {
+            "Text": "La política del MEC es garantizar que cada contenedor de productos químicos peligrosos en un sitio de trabajo esté debidamente etiquetado:",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Las hojas SDS deben de ser actualizadas cuando un nuevo químico es introducido al lugar de trabajo y debe ser revisada por los empleados.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Cada __________ tiene la responsabilidad y la autoridad de parar el trabajo cuando hay condiciones inseguras, condiciones que poseen peligro, o cualquier condición que pueda resultar en la liberación de substancias peligrosas sin miedo a represalias.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Foreman",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Supervisor",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "Empleado",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "Vendedor",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Dispositivos de LOTO serán puestos en _____________ que no deben de ser operados ni tener el potencial de liberar energía.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Tierra",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Puntos de Aisla",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "Union Electrica",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "Circuitos Energizados",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Los Empleados deberán ser capacitados en los procedimientos de LOTO antes de proporcionarles un candado, llave y etiqueta.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Ningún empleado debe trabajar en o cerca de circuitos energizados de_____ Voltioso mas sin un permiso de Trabajo Caliente que este aprobada por el presidente de MEC, Bruce Taylor.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "30",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "50",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "C",
+                "AnswerText": "120",
+                "IsCorrect": false
+              },
+              {
+                "Letter": "D",
+                "AnswerText": "240",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Hay CERO tolerancia por violar la política de electricidad de Trabajo Caliente de la compañía MEC.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "ANSI Z87.1 Gafas de seguridad y gafas de seguridad graduadas requeridas el 100% del tiempo.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Cada empleado en superficies para caminar/trabajar con un lado o borde desprotegido que esté a una altura de 10' o más por encima de una superficie inferior deberá estar protegido contra caídas mediante el uso de protección contra caídas.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "Verdadero",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
+          },
+          {
+            "Text": "Marathon Electrical Contractors se reserva el derecho de exigir que cualquier empleado se someta a una prueba de drogas o alcohol en cualquier momento.",
+            "Answers": [
+              {
+                "Letter": "A",
+                "AnswerText": "True",
+                "IsCorrect": true
+              },
+              {
+                "Letter": "B",
+                "AnswerText": "Falso",
+                "IsCorrect": false
+              }
+            ]
           }
-        },
-        {
-          "Text": "Every __________ has the responsibility and authority to stop work when unsafe conditions, conditions that pose a danger, or any condition that could result in release of hazardous substances without fear of retribution.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Foreman",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "Supervisor",
-              "IsCorrect": false
-            },
-            "C": {
-              "AnswerText": "Employee",
-              "IsCorrect": true
-            },
-            "D": {
-              "AnswerText": "Vendor",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "LOTO devices will be placed on _______ ______ that must not be operated or have the potential to release energy.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Grounding",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "Isolation Points",
-              "IsCorrect": true
-            },
-            "C": {
-              "AnswerText": "Bonding",
-              "IsCorrect": false
-            },
-            "D": {
-              "AnswerText": "Energized Circuit",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Employees shall be trained on LOTO procedures prior to being issued a lock and tag.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "No employee shall work on or near live energized circuits _____ Volts or greater without a hot work permit approved by MEC’s President, Bruce Taylor.",
-          "Answers": {
-            "A": {
-              "AnswerText": "30",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "50",
-              "IsCorrect": true
-            },
-            "C": {
-              "AnswerText": "120",
-              "IsCorrect": false
-            },
-            "D": {
-              "AnswerText": "240",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "There is a ZERO tolerance for violating the MEC electrical hot work policy.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "ANSI Z87.1 Safety glasses and prescription safety glasses required 100% of the time.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Each employee on walking/working surface with an unprotected side or edge which is 10’ or more above a lower surface shall be protected from falling by using fall protection.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Marathon Electrical Contractors reserves the right to require any employee to submit to a drug or alcohol test at any time.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "False",
-              "IsCorrect": false
-            }
-          }
-        }
-      ]
+        ]
+      }
     },
-    "Spanish": {
-      "Questions": [
-        {
-          "Text": "La política del MEC es garantizar que cada contenedor de productos químicos peligrosos en un sitio de trabajo esté debidamente etiquetado:",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Las hojas SDS deben de ser actualizadas cuando un nuevo químico es introducido al lugar de trabajo y debe ser revisada por los empleados.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Cada __________ tiene la responsabilidad y la autoridad de parar el trabajo cuando hay condiciones inseguras, condiciones que poseen peligro, o cualquier condición que pueda resultar en la liberación de substancias peligrosas sin miedo a represalias.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Foreman",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "Supervisor",
-              "IsCorrect": false
-            },
-            "C": {
-              "AnswerText": "Empleado",
-              "IsCorrect": true
-            },
-            "D": {
-              "AnswerText": "Vendedor",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Dispositivos de LOTO serán puestos en _____________ que no deben de ser operados ni tener el potencial de liberar energía.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Tierra",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "Puntos de Aisla",
-              "IsCorrect": true
-            },
-            "C": {
-              "AnswerText": "Union Electrica",
-              "IsCorrect": false
-            },
-            "D": {
-              "AnswerText": "Circuitos Energizados",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Los Empleados deberán ser capacitados en los procedimientos de LOTO antes de proporcionarles un candado, llave y etiqueta.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Ningún empleado debe trabajar en o cerca de circuitos energizados de_____ Voltioso mas sin un permiso de Trabajo Caliente que este aprobada por el presidente de MEC, Bruce Taylor.",
-          "Answers": {
-            "A": {
-              "AnswerText": "30",
-              "IsCorrect": false
-            },
-            "B": {
-              "AnswerText": "50",
-              "IsCorrect": true
-            },
-            "C": {
-              "AnswerText": "120",
-              "IsCorrect": false
-            },
-            "D": {
-              "AnswerText": "240",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Hay CERO tolerancia por violar la política de electricidad de Trabajo Caliente de la compañía MEC.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "ANSI Z87.1 Gafas de seguridad y gafas de seguridad graduadas requeridas el 100% del tiempo.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Cada empleado en superficies para caminar/trabajar con un lado o borde desprotegido que esté a una altura de 10' o más por encima de una superficie inferior deberá estar protegido contra caídas mediante el uso de protección contra caídas.",
-          "Answers": {
-            "A": {
-              "AnswerText": "Verdadero",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        },
-        {
-          "Text": "Marathon Electrical Contractors se reserva el derecho de exigir que cualquier empleado se someta a una prueba de drogas o alcohol en cualquier momento.",
-          "Answers": {
-            "A": {
-              "AnswerText": "True",
-              "IsCorrect": true
-            },
-            "B": {
-              "AnswerText": "Falso",
-              "IsCorrect": false
-            }
-          }
-        }
-      ]
+    {
+      "Title": "NewTest",
+      "English": {
+      },
+      "Spanish": {
+      }
     }
-  }
+  ]
 }

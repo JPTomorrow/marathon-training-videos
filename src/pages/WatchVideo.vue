@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <h1 id="title">Title</h1>
+    <h1 id="title">{{ title }}</h1>
 
     <div class="fluidMedia">
         <Youtube 
@@ -23,8 +23,8 @@
             <li>@localizer["TVP_Instruction_Steps_UL4"]</li>
             <li>@localizer["TVP_Instruction_Steps_UL5"]</li>
         </ol>
-        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTest"
-            disabled>@localizer["TVP_Test_Button"]</button>
+        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()"
+            >@localizer["TVP_Test_Button"]</button>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default defineComponent({
   data() {
     return {
         title: this.$route.params.title,
-        url: this.$route.params.videoUrl, // + '?autoplay=1&showinfo=0&controls=0&modestbranding=1&rel=0&enablejsapi=1',
+        url: this.$route.params.videoUrl,
         videoProperties: {
             controls: "1",
             autoplay: "1",
@@ -67,8 +67,13 @@ export default defineComponent({
             this.enableGoToTestButton();
         }
     },
-    goToTest: function() {
-        alert("test");
+    goToTestPage: function() {
+      this.$router.push({
+        name: "TrainingVideoTestForm",
+        params: {
+          title: this.title,
+        }
+      });
     }
   },
 });
