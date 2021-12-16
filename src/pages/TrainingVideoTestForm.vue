@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-      <h1>Training Videos</h1>
+      <h1>Take the Test</h1>
 
       <!--<div id="search-container">
         <input id="search-box" v-model="searchText" placeholder="Search by title" />
@@ -17,12 +17,26 @@
           <p class="desc">{{v.description}}</p>
           </div>
         </div>-->
+
+        <!-- Questions -->
+        <div class="question" v-for="q in getQuestions()" :key="q">
+          <h2>{{q.Text}}</h2>
+
+          
+          <label class="answer-label" v-for="a in q.Answers" :key="a">
+            <input class="answer-field" type="radio" v-model="q.SelectedAnswer" name="a" :value="a.Letter" />
+            {{a.AnswerText + " | " + getUniqueRadioName(q)}}
+          </label>
+        </div>
+
+        <!-- print the test form -->
+        <button id="test-btn" type="button" class="btn btn-primary" @click="printForm()">PrintForm</button>
       </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import FormData from '@/data/marathon_tests.json';
+import { SafetyForm, getTestByTitle, Test, Question, Answer } from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
   name: "TrainingVideoTestForm",
@@ -30,15 +44,21 @@ export default defineComponent({
   },
   data() {
     return {
-      title: this.$route.params.title,
-      formData: FormData["Tests"].filter(x => x["Title"] == this.$route.params.title),
+      title: this.$route.params.title as string,
+      formData: SafetyForm
     };
   },
-  created() {
-    alert(JSON.stringify(this.formData, null, 2));
-  },
   methods: {
-    
+    getQuestions: function(): Question[] {
+      let test: Test = getTestByTitle(this.title);
+      return test.English.Questions;
+    },
+    getRadioName(q: Question): string {
+      return q.Text.replace(" ", "").slice(0, 10);
+    },
+    printForm: function() {
+      alert(JSON.stringify(this.getQuestions(), null, 2));
+    }
   },
 });
 </script>
@@ -47,6 +67,7 @@ export default defineComponent({
 .code {
   color: ghostwhite;
 }
+
 #wrapper {
   width: 100%;
   height: auto;
@@ -112,58 +133,32 @@ a {
   border-top: 1px solid rgb(136, 136, 136);
 }
 
-#search-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.question {
+  color:ghostwhite;
 }
 
-#search-box {
-  background-color: rgb(87, 87, 87);
-  width: auto;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  color: ghostwhite;
-  font-size: 12pt;
-  vertical-align: middle;
+#test-btn {
+    width: 100px;
+    margin-top: 50px;
+    background-color: transparent;
+    border: 1px solid #eb1e23;
+    color: #eb1e23;
+    padding: 10px;
+    border-radius: 15px;
 }
 
-#search-box:focus {
-  outline: #eb1e23;
+#test-btn:hover {
+    background-color: #eb1e23;
+    color: ghostwhite;
 }
 
-#icon-search {
-  color: ghostwhite;
-  vertical-align: middle;
-  margin-right: 7px;
-  border-radius: 5px;
-  padding: 2px;
-  border: 1px solid ghostwhite;
-}
-
-#next-btn {
+input {
   background-color: transparent;
-  color: orangered;
-  border: 1px solid orangered;
-  border-radius: 10px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-top: 20px;
-  transition: all 0.3s ease-in-out;
+  color:black;
+  border: 2px orangered solid;
 }
 
-#next-btn:hover {
-  background-color: orangered;
-  color: ghostwhite;
-}
-
-@media (max-width: 920px) {
-  #search-container {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-  }
+.answer-label {
+  display: block;
 }
 </style>
