@@ -4,6 +4,7 @@ export class MarathonTrainingTestFormService {
 
     constructor(json: any) {
         this.Tests = json["Tests"];
+        this.;
     }
 }
 

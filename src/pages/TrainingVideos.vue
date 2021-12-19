@@ -39,7 +39,7 @@ export default defineComponent({
     goToVideoPage(title: string, url: string) {
       this.$router.push({
         name: "WatchVideo",
-        params: {
+        query: {
           title: title,
           videoUrl: url
         }

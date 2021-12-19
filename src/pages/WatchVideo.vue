@@ -40,8 +40,8 @@ export default defineComponent({
   },
   data() {
     return {
-        title: this.$route.params.title,
-        url: this.$route.params.videoUrl,
+        title: this.$route.query.title,
+        url: this.$route.query.videoUrl,
         videoProperties: {
             controls: "1",
             autoplay: "1",
@@ -70,7 +70,7 @@ export default defineComponent({
     goToTestPage: function() {
       this.$router.push({
         name: "TrainingVideoTestForm",
-        params: {
+        query: {
           title: this.title,
         }
       });
@@ -123,16 +123,10 @@ export default defineComponent({
 }
 
 #test-btn {
-    width: 50%;
+    width: 20%;
+    height:100px;
     margin-top: 50px;
-    background-color: transparent;
-    border: 1px solid #eb1e23;
-    color: #eb1e23;
-}
-
-#test-btn:hover {
-    background-color: #eb1e23;
-    color: ghostwhite;
+    background-color: rgb(34, 0, 0);
 }
 
 @media(max-width: 1200px) {
