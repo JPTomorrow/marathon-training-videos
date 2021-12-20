@@ -6,8 +6,12 @@
 			"script": "serve",
 			"problemMatcher": [],
 			"label": "npm: serve",
-			"detail": "vue-cli-service serve"
-		},
+			"detail": "vue-cli-service serve",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}eEEEEEs,
 		{
 			"type": "npm",
 			"script": "build",
@@ -26,6 +30,6 @@
 				"-l",
 				"--external"
 			]
-		},
+		}
 	]
 }

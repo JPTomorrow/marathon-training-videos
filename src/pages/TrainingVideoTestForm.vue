@@ -1,21 +1,22 @@
 <template>
   <div id="wrapper">
-      <h1>Take the Test</h1>
+    <h1>Take the Test</h1>
 
-        <!-- Questions -->
-        <div class="question" v-for="(q, idx) in getQuestions()" :key="q">
-          <h2 id="question-text">{{q.Text}}</h2>
+      <!-- Questions -->
+      <div class="question" v-for="(q, idx) in getQuestions()" :key="q">
+        <h2 id="question-text">{{q.Text}}</h2>
 
-          
-          <label class="answer-label" v-for="(a, idx2) in q.Answers" :key="a">
-            <input class="answer-field" :checked="idx2 === 0" type="radio" v-model="q.SelectedAnswer" :name="idx" :value="a.Letter" />
-            <span>{{a.AnswerText}}</span>
-          </label>
-        </div>
-
-        <!-- print the test form -->
-        <button id="test-btn" type="button" class="btn btn-primary" @click="printForm()">PrintForm</button>
+        
+        <label class="answer-label" v-for="(a, idx2) in q.Answers" :key="a">
+          <input class="answer-field" :checked="idx2 === 0" type="radio" v-model="q.SelectedAnswer" :name="idx" :value="a.Letter" />
+          <span>{{a.AnswerText}}</span>
+        </label>
       </div>
+      
+      <!-- print the test form -->
+      <button id="submit-btn" type="button" class="btn btn-primary" @click="submitTest()">Submit</button>
+      <!-- <button id="test-btn" type="button" class="btn btn-primary" @click="printForm()">PrintForm</button> -->
+    </div>
 </template>
 
 <script lang="ts">
@@ -23,9 +24,9 @@ import { defineComponent } from "vue";
 
 import { 
     SafetyForm, 
-    getTestByTitle, 
     Test, 
-    Question 
+    Question,
+    TrainingFormTestResult
   } from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
@@ -35,16 +36,25 @@ export default defineComponent({
   data() {
     return {
       title: this.$route.query.title as string,
-      formData: SafetyForm
+      formData: SafetyForm,
+      results: {}
     };
   },
   methods: {
     getQuestions: function(): Question[] {
-      let test: Test = getTestByTitle(this.title);
+      let test: Test = this.formData.getTestByTitle(this.title);
       return test.English.Questions;
     },
     printForm: function() {
       alert(JSON.stringify(this.getQuestions(), null, 2));
+    },
+    submitTest: function () {
+      let r = this.formData.evaluateTest(this.title, "English") as TrainingFormTestResult;
+      if(!r.isValid) return;
+      this.results = r;
+    },
+    resultsAreEmpty: function(): boolean {
+      return Object.keys(this.results).length === 0;
     }
   },
 });

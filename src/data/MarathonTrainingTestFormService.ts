@@ -1,10 +1,74 @@
 import SafetyForms from '@/data/marathon_tests.json';
+
+export class TrainingFormTestResult {
+    get isValid(): boolean {
+        return this.isPassed &&
+            this.totalPossible != 0 && 
+            this.uniqueCode !== "";
+    }
+
+    public isPassed = false;
+    public totalPossible = 0; // get count of questions
+    public totalCorrect = 0;
+    public percentage = 0.0;
+    public uniqueCode = "";
+
+    constructor(test: Test, language: string) {
+        let questions: Question[];
+        if (language === "English")
+            questions = test.English.Questions;
+        else if (language === "Spanish")
+            questions = test.Spanish.Questions;
+        else
+            return;
+        
+        this.totalPossible = questions.length;
+        this.totalCorrect = this._evaluateCorrectAnswers(questions);
+        this.percentage = Math.floor((this.totalPossible / this.totalCorrect) * 100);
+        
+        // check if passed and generate unique code
+        if (this.percentage > 70.0) {
+            this.isPassed = true;
+            this.uniqueCode = this._makeRandomCode(6);
+        }
+    }   
+
+    private _evaluateCorrectAnswers(questions: Question[]): number {
+        let final_cnt = 0;
+        questions.forEach((val) => { 
+            if (val.SelectedAnswer === "") return;
+            const match = val.Answers.find(x => x.Letter === val.SelectedAnswer);
+            if (match && match.IsCorrect) final_cnt += 1;
+        });
+        return final_cnt;
+    }
+
+    private _makeRandomCode(length: number): string {
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        const charactersLength: number = characters.length;
+        for ( let i = 0; i < length; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
+}
+
 export class MarathonTrainingTestFormService {
     Tests: Test[];
 
     constructor(json: any) {
         this.Tests = json["Tests"];
-        this.;
+    }
+
+    // returns default value test result if invalid test.
+    evaluateTest(testTitle: string, language: string): TrainingFormTestResult {
+        const test = this.getTestByTitle(testTitle);
+        return new TrainingFormTestResult(test, language);
+    }
+
+    getTestByTitle(title: string): Test {
+        return this.Tests.find((test) => test.Title == title) as Test;
     }
 }
 
@@ -35,7 +99,3 @@ export interface Answer {
 }
 
 export const SafetyForm: MarathonTrainingTestFormService = new MarathonTrainingTestFormService(SafetyForms);
-
-export function getTestByTitle(title: string): Test {
-    return SafetyForm.Tests.find((test) => test.Title == title) as Test;
-}
