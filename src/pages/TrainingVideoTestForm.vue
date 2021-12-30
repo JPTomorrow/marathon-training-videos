@@ -6,13 +6,13 @@
       <div class="question" v-for="(q, idx) in getQuestions()" :key="q">
         <h2 id="question-text">{{q.Text}}</h2>
 
-        
+
         <label class="answer-label" v-for="(a, idx2) in q.Answers" :key="a">
           <input class="answer-field" :checked="idx2 === 0" type="radio" v-model="q.SelectedAnswer" :name="idx" :value="a.Letter" />
           <span>{{a.AnswerText}}</span>
         </label>
       </div>
-      
+
       <!-- print the test form -->
       <button id="submit-btn" type="button" class="btn btn-primary" @click="submitTest()">Submit</button>
       <!-- <button id="test-btn" type="button" class="btn btn-primary" @click="printForm()">PrintForm</button> -->
@@ -22,9 +22,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { 
-    SafetyForm, 
-    Test, 
+    import {
+    SafetyForm,
+    Test,
     Question,
     TrainingFormTestResult
   } from '@/data/MarathonTrainingTestFormService';
@@ -73,7 +73,7 @@ h1 {
   height: auto;
   text-align: left;
   margin-top: 10px;
-  margin-left: 25px; 
+  margin-left: 25px;
 }
 
 .title {
