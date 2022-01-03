@@ -2,9 +2,7 @@ import SafetyForms from '@/data/marathon_tests.json';
 
 export class TrainingFormTestResult {
     get isValid(): boolean {
-        return this.isPassed &&
-            this.totalPossible != 0 && 
-            this.uniqueCode !== "";
+        return this.uniqueCode !== "";
     }
 
     public isPassed = false;
@@ -24,7 +22,8 @@ export class TrainingFormTestResult {
         
         this.totalPossible = questions.length;
         this.totalCorrect = this._evaluateCorrectAnswers(questions);
-        this.percentage = Math.floor((this.totalPossible / this.totalCorrect) * 100);
+        this.percentage = this.totalCorrect == 0 || this.totalPossible <= 0
+            ? 0.0 : Math.floor((this.totalCorrect / this.totalPossible) * 100);
         
         // check if passed and generate unique code
         if (this.percentage > 70.0) {
@@ -37,8 +36,12 @@ export class TrainingFormTestResult {
         let final_cnt = 0;
         questions.forEach((val) => { 
             if (val.SelectedAnswer === "") return;
+
             const match = val.Answers.find(x => x.Letter === val.SelectedAnswer);
-            if (match && match.IsCorrect) final_cnt += 1;
+            
+            if (match && match.IsCorrect) {
+                final_cnt += 1;
+            }
         });
         return final_cnt;
     }
@@ -51,6 +54,16 @@ export class TrainingFormTestResult {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
+    }
+
+    public toString(): string {
+        let o = "";
+        o += "Total Possible: " + this.totalPossible + "\n";
+        o += "Total Correct: " + this.totalCorrect + "\n";
+        o += "Percentage: " + this.percentage + "\n";
+        o += "Unique Code: " + this.uniqueCode + "\n";
+        o += "Is Passed: " + this.isPassed + "\n";
+        return o
     }
 }
 
