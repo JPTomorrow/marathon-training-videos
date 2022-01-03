@@ -39,9 +39,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { 
-    SafetyForm, 
-    Test, 
+    import {
+    SafetyForm,
+    Test,
     Question,
     TrainingFormTestResult
   } from '@/data/MarathonTrainingTestFormService';
@@ -104,7 +104,7 @@ h1 {
   height: auto;
   text-align: left;
   margin-top: 10px;
-  margin-left: 25px; 
+  margin-left: 25px;
 }
 
 #submitted-wrapper {
