@@ -78,10 +78,38 @@ export default defineComponent({
     submitTest: function () {
       let r = this.formData.evaluateTest(this.title, "English") as TrainingFormTestResult;
       this.results = r;
-      this.showConfirmationPrompt = false
+      this.showConfirmationPrompt = false;
+      if(r.isPassed) {
+        this.sendEmail();
+      }
     },
     resultsAreEmpty: function(): boolean {
       return Object.keys(this.results).length === 0;
+    },
+    sendEmail: async function() {
+        const { text } = await (await fetch("/api/message")).json();
+        alert(text);
+
+        // let email = Credentials.Email;
+        // const onboard_email = "safetyonboarding@marathonelectrical.com";
+
+        // MailMessage msg = new MailMessage();
+        // msg.From = new MailAddress(email);
+        // msg.To.Add(email);
+        // msg.To.Add(onboard_email);
+        // msg.IsBodyHtml = true;
+        // msg.Subject = GetMessageSubject();
+        // msg.Body = GetMessageBody();
+        // var creds = new System.Net.NetworkCredential(email, Credentials.Password);
+
+        // SmtpClient client = new SmtpClient("smtp.office365.com", 587);
+        // client.DeliveryMethod = SmtpDeliveryMethod.Network;
+        // client.UseDefaultCredentials = false;
+        // client.Credentials = creds;
+        // client.EnableSsl = true;
+
+        // client.Send(msg);
+        
     },
     retakeTest: function() {
       // we pass back the video url to load it on the watch video page
