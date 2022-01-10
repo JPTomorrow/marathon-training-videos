@@ -176,7 +176,7 @@ a {
 @media (max-width: 920px) {
   #search-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;

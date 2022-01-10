@@ -14,17 +14,17 @@
     </div>
 
     <div class="description">
-        <h1 Underlined="true">@localizer["TVP_Instructions"]</h1>
-        <p>@localizer["TVP_Instruction_Steps_P1"]</p>
+        <h1 Underlined="true">INSTRUCTIONS</h1>
+        <p>Please read carefully and complete all of the steps in order to ensure that your recruiter is informed that you have watched this video.</p>
         <ol id="tvp-instructions">
-            <li>@localizer["TVP_Instruction_Steps_UL1"]</li>
-            <li>@localizer["TVP_Instruction_Steps_UL2"]</li>
-            <li>@localizer["TVP_Instruction_Steps_UL3"]</li>
-            <li>@localizer["TVP_Instruction_Steps_UL4"]</li>
-            <li>@localizer["TVP_Instruction_Steps_UL5"]</li>
+            <li>Make sure to watch this video,  paying close attention as you will be tested on this material.</li>
+            <li>After watching this video, the 'Take the test' button below will become unlocked. Click on it to begin the test.</li>
+            <li>When you arrive to the test page, make sure to input your Full name and Email address.</li>
+            <li>Once you have completed the test you will be given a 6 charter code. You will be required to give this code to your recruiter.</li>
+            <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
         <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()"
-            >@localizer["TVP_Test_Button"]</button>
+            disabled>Take the test</button>
     </div>
   </div>
 </template>
@@ -43,12 +43,11 @@ export default defineComponent({
         title: this.$route.query.title,
         url: this.$route.query.videoUrl,
         videoProperties: {
-            controls: "1",
+            controls: "0",
             autoplay: "1",
             showinfo: "0",
             disablekb: "1",
             modestbranding: "1",
-
         }
     };
   },
@@ -72,6 +71,7 @@ export default defineComponent({
         name: "TrainingVideoTestForm",
         query: {
           title: this.title,
+          videoUrl: this.$route.query.videoUrl
         }
       });
     }
@@ -105,10 +105,15 @@ export default defineComponent({
 .description {
     padding-top: 25px;
     padding-bottom: 25px;
+    color: ghostwhite;
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .description p {
-    color: ghostwhite;
+    
     text-align: left;
 }
 
@@ -123,10 +128,8 @@ export default defineComponent({
 }
 
 #test-btn {
-    width: 20%;
-    height:100px;
+    height: 50px;
     margin-top: 50px;
-    background-color: rgb(34, 0, 0);
 }
 
 @media(max-width: 1200px) {
@@ -146,6 +149,23 @@ export default defineComponent({
 
     #title {
         font-size: 22pt;
+    }
+
+    .description {
+        width: 95%;
+    }
+
+    #wrapper {
+        width: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    #test-btn {
+        height: 50px;
+        margin-top: 50px;
+        width: 100%;
     }
 }
 </style>

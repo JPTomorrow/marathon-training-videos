@@ -1,10 +1,7 @@
 import SafetyForms from '@/data/marathon_tests.json';
 
 export class TrainingFormTestResult {
-    get isValid(): boolean {
-        return this.uniqueCode !== "";
-    }
-
+    public isValid = false;
     public isPassed = false;
     public totalPossible = 0; // get count of questions
     public totalCorrect = 0;
@@ -24,12 +21,14 @@ export class TrainingFormTestResult {
         this.totalCorrect = this._evaluateCorrectAnswers(questions);
         this.percentage = this.totalCorrect == 0 || this.totalPossible <= 0
             ? 0.0 : Math.floor((this.totalCorrect / this.totalPossible) * 100);
-        
+
         // check if passed and generate unique code
         if (this.percentage > 70.0) {
             this.isPassed = true;
             this.uniqueCode = this._makeRandomCode(6);
         }
+
+        this.isValid = true;
     }   
 
     private _evaluateCorrectAnswers(questions: Question[]): number {

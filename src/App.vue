@@ -66,7 +66,8 @@ button {
     border: 1px solid #eb1e23;
     color: #eb1e23;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
 }
 
 button:hover {
@@ -95,6 +96,19 @@ button:hover {
   color: #e0e721;
 }
 
+@media (max-width: 1200px) {
+  #body-container {
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    margin-top: 220px !important;
+    border-radius: 0 !important;
+  }
+}
+
 @media (max-width: 920px) {
   #nav {
     height: auto;
@@ -119,6 +133,7 @@ button:hover {
     border: #eb1e23 1px solid;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 10px;
   }
 }
 
