@@ -62,7 +62,7 @@ export default defineComponent({
       title: this.$route.query.title as string,
       formData: SafetyForm,
       results: {},
-      showConfirmationPrompt: false
+      showConfirmationPrompt: false,
     };
   },
   methods: {
@@ -81,8 +81,8 @@ export default defineComponent({
       this.showConfirmationPrompt = false;
 
       if(r.isPassed) {
-        this.sendEmail().then((str) => {
-          alert(str);
+        this.sendEmail().then((creds) => {
+          alert(creds.username + " | "  + creds.password);
         });
       }
     },
