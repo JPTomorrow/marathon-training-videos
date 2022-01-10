@@ -79,16 +79,19 @@ export default defineComponent({
       let r = this.formData.evaluateTest(this.title, "English") as TrainingFormTestResult;
       this.results = r;
       this.showConfirmationPrompt = false;
+
       if(r.isPassed) {
-        this.sendEmail();
+        this.sendEmail().then((str) => {
+          alert(str);
+        });
       }
     },
     resultsAreEmpty: function(): boolean {
       return Object.keys(this.results).length === 0;
     },
     sendEmail: async function() {
-        const { text } = await (await fetch("/api/message")).json();
-        alert(text);
+        const { text } = await (await fetch("/api/smtp-email")).json();
+        return text;
 
         // let email = Credentials.Email;
         // const onboard_email = "safetyonboarding@marathonelectrical.com";

@@ -1,0 +1,1 @@
+swa start dist --api-location api
