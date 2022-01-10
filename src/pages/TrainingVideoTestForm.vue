@@ -63,6 +63,7 @@ export default defineComponent({
       formData: SafetyForm,
       results: {},
       showConfirmationPrompt: false,
+      showEmailSentText: false
     };
   },
   methods: {
@@ -80,39 +81,45 @@ export default defineComponent({
       this.results = r;
       this.showConfirmationPrompt = false;
 
+      // send email if test has been passed
       if(r.isPassed) {
-        this.sendEmail().then((creds) => {
-          alert(creds.username + " | "  + creds.password);
+        this.getCredentialsForEmail().then(([username, password]) => {
+          this.sendEmail(username, password);
         });
       }
     },
     resultsAreEmpty: function(): boolean {
       return Object.keys(this.results).length === 0;
     },
-    sendEmail: async function() {
-        const { text } = await (await fetch("/api/smtp-email")).json();
-        return text;
+    getCredentialsForEmail: async function() {
+      const { username, password } = await (await fetch("/api/smtp-email")).json();
+      return [ username, password ];
+    },
+    sendEmail: async function(username: string, password: string) {
+      // TODO: Fix this crap
 
-        // let email = Credentials.Email;
-        // const onboard_email = "safetyonboarding@marathonelectrical.com";
+      /* eslint-disable */
+      const nodemailer = require("nodemailer");
 
-        // MailMessage msg = new MailMessage();
-        // msg.From = new MailAddress(email);
-        // msg.To.Add(email);
-        // msg.To.Add(onboard_email);
-        // msg.IsBodyHtml = true;
-        // msg.Subject = GetMessageSubject();
-        // msg.Body = GetMessageBody();
-        // var creds = new System.Net.NetworkCredential(email, Credentials.Password);
+      let transporter = nodemailer.createTransport({
+        host: "smtp.office365.com",
+        port: 587,
+        secure: false, 
+        auth: {
+          user: username, 
+          pass: password, 
+        },
+      });
 
-        // SmtpClient client = new SmtpClient("smtp.office365.com", 587);
-        // client.DeliveryMethod = SmtpDeliveryMethod.Network;
-        // client.UseDefaultCredentials = false;
-        // client.Credentials = creds;
-        // client.EnableSsl = true;
+      let info = await transporter.sendMail({
+        from: username,
+        to: username + ", safetyonboarding@marathonelectrical.com",
+        subject: "test from new system",
+        text: "test from new system", // plain text body
+        html: "<b>test from new system</b>", // html body
+      });
 
-        // client.Send(msg);
-        
+      console.log("Message sent: %s", info.messageId);
     },
     retakeTest: function() {
       // we pass back the video url to load it on the watch video page
