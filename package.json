@@ -20,6 +20,8 @@
     "@types/three": "^0.134.0",
     "core-js": "^3.6.5",
     "dat.gui": "^0.7.7",
+    "dns": "^0.2.2",
+    "nodemailer": "^6.7.2",
     "register-service-worker": "^1.7.1",
     "three": "^0.135.0",
     "vue": "^3.0.0",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "@capacitor/cli": "3.3.2",
     "@types/jest": "^24.0.19",
+    "@types/nodemailer": "^6.4.4",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
