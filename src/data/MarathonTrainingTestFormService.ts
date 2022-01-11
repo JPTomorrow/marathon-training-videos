@@ -22,8 +22,6 @@ export class TrainingFormTestResult {
         this.percentage = this.totalCorrect == 0 || this.totalPossible <= 0
             ? 0.0 : Math.floor((this.totalCorrect / this.totalPossible) * 100);
         
-        this.percentage = 80.0; // delete - auto pass test
-        
         // check if passed and generate unique code
         if (this.percentage > 70.0) {
             this.isPassed = true;

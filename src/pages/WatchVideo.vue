@@ -24,7 +24,7 @@
             <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
         <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()"
-            >Take the test</button>
+            disabled>Take the test</button>
     </div>
   </div>
 </template>

@@ -1,14 +1,19 @@
 <template>
   <div id="wrapper">
-    <h1>Take the Test</h1>
+    <h1 style="margin-bottom:15px;">Take the Test</h1>
+
+    <label id="full-name-label" for="full-name-field" style="color: ghostwhite;">Full Name: </label>
+    <input id="full-name-field" placeholder="full name" v-model="fullNameText" style="margin-bottom:10px;"/>
+    <br />
+    <label id="email-label" for="email-field" style="color: ghostwhite;">Email: </label>
+    <input id="email-field" placeholder="email" v-model="emailText"/>
 
     <!-- Questions -->
     <div class="question" v-for="(q, idx) in getQuestions()" :key="q">
       <h2 id="question-text">{{(idx + 1) + ". " + q.Text}}</h2>
 
-      
-      <label class="answer-label" v-for="(a, idx2) in q.Answers" :key="a">
-        <input class="answer-field" :checked="idx2 === 0" type="radio" v-model="q.SelectedAnswer" :name="idx" :value="a.Letter" />
+      <label class="answer-label" v-for="a in q.Answers" :key="a">
+        <input class="answer-field" :checked="false" type="radio" v-model="q.SelectedAnswer" :name="idx" :value="a.Letter" />
         <span>{{a.AnswerText}}</span>
       </label>
     </div>
@@ -29,13 +34,13 @@
       <p class="submitted-score">Score: {{ results.totalCorrect }} / {{ results.totalPossible }} -> {{ results.percentage }}%</p>
       <h2 class="passed-header-2">Copy the code below and turn it into your recruiter for them to confirm that you completed the test. DO NOT navigate away from this page without writing down the code or else you will have to watch the video and complete the test again to get another code.</h2>
       <h2 id="submitted-code">Unique Code: <font color="green">{{ results.uniqueCode }}</font></h2>
-      <!-- <pre class="code" v-text="results" /> -->
-      <button id="video-list-btn" type="button" class="btn btn-primary" @click="goToVideoList()">Return to Training Videos</button>
+      <button id="video-list-btn" type="button" class="btn btn-primary" @click="goToVideoList()" disabled>Return to Training Videos</button>
     </div>
     <div id="failed-wrapper" v-else>
       <h1 class="tf-passed-header">Sorry, <font color="red">You Failed.</font></h1>
       <p class="tf-submitted-score">Score: {{ results.totalCorrect }} / {{ results.totalPossible }} -> {{ results.percentage }}%</p>
       <h2 class="tf-passed-header-2">Please rewatch the video all the way through and retake the test. 70%+ is a passing grade.</h2>
+
       <!-- <pre class="code" v-text="results" /> -->
       <button id="rewatch-video-btn" type="button" class="btn btn-primary" @click="retakeTest()">Rewatch Video</button>
     </div>
@@ -50,7 +55,8 @@ import { defineComponent } from "vue";
     SafetyForm,
     Test,
     Question,
-    TrainingFormTestResult
+    TrainingFormTestResult,
+    MarathonTrainingTestFormService
   } from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
@@ -63,7 +69,10 @@ export default defineComponent({
       formData: SafetyForm,
       results: {},
       showConfirmationPrompt: false,
-      showEmailSentText: false
+      showEmailSentText: false,
+      showSubmittedText: false,
+      fullNameText: "",
+      emailText: ""
     };
   },
   methods: {
@@ -76,50 +85,65 @@ export default defineComponent({
       let prompt = document.getElementById('confirmation-prompt-wrapper') as HTMLInputElement;
       prompt.style.height = this.showConfirmationPrompt ? 'auto' : '0';
     },
+    resultsAreEmpty: function(): boolean {
+      return Object.keys(this.results).length === 0;
+    },
     submitTest: function () {
+      // check to see if full name and email have been provided
+      if (this.fullNameText === "" || this.emailText === "") {
+        alert("Please provide your full name and email.");
+        return;
+      }
+
+      // get the test results
       let r = this.formData.evaluateTest(this.title, "English") as TrainingFormTestResult;
       this.results = r;
       this.showConfirmationPrompt = false;
 
       // send email if test has been passed
-      if(r.isPassed) {
-        this.getCredentialsForEmail().then(([username, password]) => {
-          this.sendEmail(username, password);
+      if(r.isPassed) this.sendEmail();
+    },
+    sendEmail: async function() {
+      // send email payload to the api to send email
+      const response = await fetch("/api/smtp-email",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            subject: this.getSubject(),
+            message: this.getMessageBody(),
+          }),
         });
-      }
-    },
-    resultsAreEmpty: function(): boolean {
-      return Object.keys(this.results).length === 0;
-    },
-    getCredentialsForEmail: async function() {
-      const { username, password } = await (await fetch("/api/smtp-email")).json();
-      return [ username, password ];
-    },
-    sendEmail: async function(username: string, password: string) {
-      // TODO: Fix this crap
 
-      /* eslint-disable */
-      const nodemailer = require("nodemailer");
+      // toggle go to training videos button disabled
+      let btn = document.getElementById('video-list-btn') as HTMLInputElement;
+      btn.disabled = false;
+    },
+    getSubject: function() {
+      let name = this.fullNameText === "" ? "An Employee " : this.fullNameText;
+      let passed = (this.results as TrainingFormTestResult).isPassed ? "passed" : "failed";
+      return name + passed + ` the ${this.title}` + " Test";
+    },
+    getMessageBody: function() {
+      let res = this.results as TrainingFormTestResult;
+      let name = this.fullNameText === "" ? "no employee name provided" : this.fullNameText;
+      let provided_email = this.emailText === "" ? "no email address provided" : this.emailText;
 
-      let transporter = nodemailer.createTransport({
-        host: "smtp.office365.com",
-        port: 587,
-        secure: false, 
-        auth: {
-          user: username, 
-          pass: password, 
-        },
+      let body = "<h1>Score: " + res.totalCorrect + "/" + res.totalPossible + " -> " + res.percentage + "%" + "</h1><!--!-->" +
+      "<h1>Unique Code: " + res.uniqueCode + "</h1><!--!-->";
+
+      body += "<h1>Test Name: " + this.title + "</h1><!--!-->";
+      body += "<h1>Full Employee Name: " + name + "</h1><!--!-->";
+      body += "<h1>Employee Email Address: " + provided_email + "</h1><!--!--><hr /><!--!-->";
+
+      this.getQuestions().forEach(q => {
+        body += "<h3>Question: " + q.Text + "</h3><!--!-->";
+        body += "<p>Answer: " + (q.SelectedAnswer == undefined ? "no answer provided" : q.SelectedAnswer) + "</p><!--!-->";
       });
 
-      let info = await transporter.sendMail({
-        from: username,
-        to: username + ", safetyonboarding@marathonelectrical.com",
-        subject: "test from new system",
-        text: "test from new system", // plain text body
-        html: "<b>test from new system</b>", // html body
-      });
-
-      console.log("Message sent: %s", info.messageId);
+      return body;
     },
     retakeTest: function() {
       // we pass back the video url to load it on the watch video page
@@ -285,7 +309,6 @@ h1 {
   border-radius: 11px;
   border: 1px solid #eb1e23;
   background-color: transparent;
-  z-index: -1;
 }
 
 .question label input[type='radio']:checked+span {
