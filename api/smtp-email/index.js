@@ -1,5 +1,7 @@
+const { nodemailer } = require("nodemailer");
+
+
 module.exports = async function (context, req) {
-    const nodemailer = require("nodemailer");
     // this is being read as a value from the configuraiton 
     // key: values in azure on the static web app
     const username = process.env.SMTP_USERNAME; 

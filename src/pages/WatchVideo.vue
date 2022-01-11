@@ -23,8 +23,7 @@
             <li>Once you have completed the test you will be given a 6 charter code. You will be required to give this code to your recruiter.</li>
             <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
-        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()"
-            >Take the test</button>
+        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()">Take the test</button>
     </div>
   </div>
 </template>
