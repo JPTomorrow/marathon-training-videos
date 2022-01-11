@@ -24,7 +24,7 @@
             <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
         <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()"
-            disabled>Take the test</button>
+            >Take the test</button>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ import { defineComponent } from "vue";
 import Youtube from 'vue3-youtube';
 
 export default defineComponent({
-  name: "WatchVudeo",
+  name: "WatchVideo",
   components: {
     Youtube
   },
@@ -56,7 +56,6 @@ export default defineComponent({
         (this.$refs.youtube as any).playVideo();
     },
     enableGoToTestButton: function() {
-        alert("enabling");
         let btn = document.getElementById('test-btn') as HTMLInputElement;
         if(btn) btn.disabled = false;
     },
