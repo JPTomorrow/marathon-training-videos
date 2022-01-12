@@ -254,7 +254,7 @@ h1 {
 }
 
 #confirmation-prompt-wrapper {
-  transition: height 3s ease-in;
+  transition: height 1s ease-in;
   display: block;
   line-height:0;
   height: 0;
@@ -320,7 +320,7 @@ h1 {
   left: 6px;
   color: #eb1e23;;
   border: 1px solid #eb1e23;
-  transition: all  2s ease-in-out;
+  transition: all  0.1s ease-in-out;
 }
 
 .answer-label {
