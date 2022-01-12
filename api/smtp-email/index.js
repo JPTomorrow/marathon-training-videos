@@ -1,4 +1,4 @@
-const { nodemailer } = require("nodemailer");
+const { nodemailer } = require("../deps/nodemailer/lib/nodemailer.js");
 
 
 module.exports = async function (context, req) {
