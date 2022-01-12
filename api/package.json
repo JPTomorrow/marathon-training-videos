@@ -9,5 +9,7 @@
   "dependencies": {
     "nodemailer": "^6.7.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemailer": "^6.7.2"
+  }
 }
