@@ -6,6 +6,8 @@
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "nodemailer": "^6.7.2"
+  },
   "devDependencies": {}
 }

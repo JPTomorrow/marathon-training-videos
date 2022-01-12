@@ -123,8 +123,7 @@ export default defineComponent({
     },
     getSubject: function() {
       let name = this.fullNameText === "" ? "An Employee " : this.fullNameText;
-      let passed = (this.results as TrainingFormTestResult).isPassed ? "passed" : "failed";
-      return name + passed + ` the ${this.title}` + " Test";
+      return name + ` has passed the ${this.title}` + " Test";
     },
     getMessageBody: function() {
       let res = this.results as TrainingFormTestResult;
