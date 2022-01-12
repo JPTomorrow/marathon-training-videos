@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "morderin-web-vue",
+	"appName": "Marathon Training Videos",
 	"webDir": "dist",
 	"bundledWebRuntime": false,
 	"server": {

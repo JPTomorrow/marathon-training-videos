@@ -1,4 +1,4 @@
-# morderin-web-vue
+# Marathon Training Videos
 
 ## Project setup
 ```
