@@ -1,12 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import Home from "../pages/Home.vue";
-import FormExamples from "../pages/FormExamples.vue";
 import MarathonSafetyForm from "../pages/MarathonSafetyForm.vue";
 import TrainingVidoes from "../pages/TrainingVideos.vue";
 import WatchVideo from "../pages/WatchVideo.vue";
 import TrainingVideoTestForm from "../pages/TrainingVideoTestForm.vue";
-import PortfolioImageGrid from "../pages/PortfolioImageGrid.vue";
-import ColorPickerTest from "../pages/ColorPickerTest.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {

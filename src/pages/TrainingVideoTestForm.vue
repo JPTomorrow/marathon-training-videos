@@ -51,13 +51,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-    import {
-    SafetyForm,
-    Test,
-    Question,
-    TrainingFormTestResult,
-    MarathonTrainingTestFormService
-  } from '@/data/MarathonTrainingTestFormService';
+import {
+  SafetyForm,
+  Test,
+  Question,
+  TrainingFormTestResult,
+} from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
   name: "TrainingVideoTestForm",
@@ -105,7 +104,7 @@ export default defineComponent({
     },
     sendEmail: async function() {
       // send email payload to the api to send email
-      const response = await fetch("/api/smtp-email",
+      await fetch("/api/smtp-email",
         {
           method: "post",
           headers: {

@@ -30,7 +30,6 @@ export default defineComponent({
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
   background-color: #fff;
   background-color: #363636;
 }
@@ -44,7 +43,7 @@ body {
 }
 
 #body-container {
-  width: 95%;
+  width: 92%;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;

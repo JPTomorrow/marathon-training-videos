@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { youtubeVideos, getVideosByName, YoutubeVideoEntry } from "@/data/YoutubeTutorialVideos.js"
+import { youtubeVideos, getVideosByName } from "@/data/YoutubeTutorialVideos.js"
 
 export default defineComponent({
   name: "TrainingVidoes",
