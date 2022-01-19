@@ -23,7 +23,7 @@
             <li>Once you have completed the test you will be given a 6 charter code. You will be required to give this code to your recruiter.</li>
             <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
-        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()" disabled>Take the test</button>
+        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()" disabled>{{btn_txt}}</button>
     </div>
   </div>
 </template>
@@ -48,7 +48,8 @@ export default defineComponent({
             disablekb: 1,
             modestbranding: 1,
             start: 0
-        }
+        },
+        btn_txt: "Watch the video first!",
     };
   },
   methods: {
@@ -57,7 +58,10 @@ export default defineComponent({
     },
     enableGoToTestButton: function() {
         let btn = document.getElementById('test-btn') as HTMLInputElement;
-        if(btn) btn.disabled = false;
+        if(btn) {
+            btn.disabled = false;
+            this.btn_txt = "Take the test";
+        }
     },
     onStateChanged: function(event: any) {
         let state = event.target.playerInfo.playerState as number|undefined;
@@ -134,7 +138,7 @@ export default defineComponent({
 @media(max-width: 1200px) {
     .fluidMedia {
         width: 348px;
-        height: 250px;
+        height: 350px;
         border: 1px solid #ddd;
         border-radius: 20px;
         margin-left: auto;
