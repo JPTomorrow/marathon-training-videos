@@ -14,6 +14,14 @@
       <div id="video-list" v-else>
         <div class="entry-container"  v-for="v in filteredVideos" :key="v" @click="goToVideoPage(v.title, v.englishUrl)">
           <p class="title">{{v.title}}</p>
+
+          <div v-if="getTestAvailability(v.title)">
+            <p class="test-availability">Employee Test - <font color="green">Available</font></p>
+          </div>
+          <div v-else>
+            <p class="test-availability">Employee Test - <font color="red">Not Available</font></p>
+          </div>
+
           <p class="desc">{{v.description}}</p>
           </div>
         </div>
@@ -23,6 +31,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { youtubeVideos, getVideosByName } from "@/data/YoutubeTutorialVideos.js"
+import {
+  SafetyForm,
+} from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
   name: "TrainingVidoes",
@@ -32,7 +43,8 @@ export default defineComponent({
     return {
       videos: youtubeVideos,
       filteredVideos: youtubeVideos,
-      searchText: ""
+      searchText: "",
+      formData: SafetyForm,
     };
   },
   methods: {
@@ -44,6 +56,9 @@ export default defineComponent({
           videoUrl: url
         }
       });
+    },
+    getTestAvailability(title: string) {
+      return this.formData.hasTest(title, "English");
     }
   },
   watch: {
@@ -173,6 +188,14 @@ a {
   color: ghostwhite;
 }
 
+.test-availability {
+  color: ghostwhite;
+  padding: 0;
+  margin: 0;
+  font-size: 9pt;
+  padding-left: 10px !important;
+}
+
 @media (max-width: 920px) {
   #search-container {
     display: flex;
@@ -180,6 +203,11 @@ a {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+  }
+
+  .entry-container {
+    background-color: #191919;
+    border-radius: 5px;
   }
 }
 </style>

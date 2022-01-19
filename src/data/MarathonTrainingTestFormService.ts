@@ -82,6 +82,17 @@ export class MarathonTrainingTestFormService {
     getTestByTitle(title: string): Test {
         return this.Tests.find((test) => test.Title == title) as Test;
     }
+
+    hasTest(title: string, language: string): boolean {
+        const test = this.Tests.find((test) => test.Title === title) as Test;
+        if (!test) return false;
+        if (language === "English") {
+            return test.English.Questions.length > 0;
+        }
+        else {
+            return test.Spanish.Questions.length > 0;
+        }
+    }
 }
 
 export interface Test {

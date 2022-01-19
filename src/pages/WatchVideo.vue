@@ -23,7 +23,12 @@
             <li>Once you have completed the test you will be given a 6 charter code. You will be required to give this code to your recruiter.</li>
             <li>After you have given your code to the recruiter, the recruiter will give you all the required PPE, contact information and address to your assigned jobsite.</li>
         </ol>
-        <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()" disabled>{{btn_txt}}</button>
+        <div v-if="getTestAvailability(this.title)">
+            <button id="test-btn" type="button" class="btn btn-primary" @click="goToTestPage()" disabled>{{btn_txt}}</button>
+        </div>
+        <div v-else>
+            <p style="text-align:center;" class="test-availability">THE TEST FOR THIS VIDEO IS CURRENTLY UNAVAILABLE</p>
+        </div>
     </div>
   </div>
 </template>
@@ -31,6 +36,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Youtube from 'vue3-youtube';
+import {
+  SafetyForm,
+} from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
   name: "WatchVideo",
@@ -50,9 +58,13 @@ export default defineComponent({
             start: 0
         },
         btn_txt: "Watch the video first!",
+        formData: SafetyForm,
     };
   },
   methods: {
+    getTestAvailability(title: string) {
+      return this.formData.hasTest(title, "English");
+    },
     onReady: function() {
         (this.$refs.youtube as any).playVideo();
     },
@@ -77,7 +89,7 @@ export default defineComponent({
           videoUrl: this.$route.query.videoUrl
         }
       });
-    }
+    },
   },
 });
 </script>
@@ -118,6 +130,19 @@ export default defineComponent({
 .description p {
     
     text-align: left;
+}
+
+.test-availability {
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 10px;
+    width: auto;
+    color: red;
+    
+}
+
+#unavailable {
+    text-align: center;
 }
 
 #tvp-instructions {
