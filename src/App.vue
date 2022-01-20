@@ -108,7 +108,7 @@ button:hover {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1200px) {
   #nav {
     height: auto;
     display: grid;
