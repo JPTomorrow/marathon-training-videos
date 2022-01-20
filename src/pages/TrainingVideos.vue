@@ -31,9 +31,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { youtubeVideos, getVideosByName } from "@/data/YoutubeTutorialVideos.js"
-import {
-  SafetyForm,
-} from '@/data/MarathonTrainingTestFormService';
+import { SafetyForm } from '@/data/MarathonTrainingTestFormService';
 
 export default defineComponent({
   name: "TrainingVidoes",
@@ -196,7 +194,7 @@ a {
   padding-left: 10px !important;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1200px) {
   #search-container {
     display: flex;
     justify-content: flex-start;
