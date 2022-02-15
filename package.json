@@ -76,7 +76,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
+    "rules": {
+      "@typescript-eslint/no-var-requires": 0
+    },
     "overrides": [
       {
         "files": [

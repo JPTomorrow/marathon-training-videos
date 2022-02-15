@@ -1,5 +1,3 @@
-import SafetyForms from '@/data/marathon_tests.json';
-
 export class TrainingFormTestResult {
     public isValid = false;
     public isPassed = false;
@@ -66,11 +64,13 @@ export class TrainingFormTestResult {
     }
 }
 
+import test1 from '@/data/tests/test_new_hire_ob.json';
 export class MarathonTrainingTestFormService {
     Tests: Test[];
 
-    constructor(json: any) {
-        this.Tests = json["Tests"];
+    constructor() {
+        this.Tests = [];
+        this.Tests.push(test1);
     }
 
     // returns default value test result if invalid test.
@@ -121,4 +121,4 @@ export interface Answer {
     IsCorrect:  boolean;
 }
 
-export const SafetyForm: MarathonTrainingTestFormService = new MarathonTrainingTestFormService(SafetyForms);
+export const SafetyForm: MarathonTrainingTestFormService = new MarathonTrainingTestFormService();

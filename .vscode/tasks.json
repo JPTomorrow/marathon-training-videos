@@ -27,6 +27,11 @@
       "options": {
         "cwd": "${workspaceFolder}/api"
       }
+    },
+    {
+      "type": "shell",
+      "label": "serve",
+      "command": "npm run serve",
     }
   ]
 }
