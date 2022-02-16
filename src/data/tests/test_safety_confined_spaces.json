@@ -1,0 +1,179 @@
+{
+  "Title": "Employee Safety in Confined Spaces",
+  "English": {
+    "Questions": [
+      {
+        "Text": "OSHA does not require any confined space entry procedure be followed in non-permit required confined spaces.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which of the following must be included on the written entry permit?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Name and signature of the entry supervisor",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Means used to isolate the space",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Results of initial atmospheric testing",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "D",
+            "AnswerText": "All of the above",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "An atmosphere is considered hazardous when there is a presence of a flammable substance in excess of ______ percent of its lower flammable limit.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "10",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "20",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "50",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "An oxygen-rich atmosphere exists in a confined space when the oxygen level is above ______ percent.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "10",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "19.5",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "23.5",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Samples taken during atmospheric monitoring should only be taken from the middle of the space.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "All of the hazards of a particular confined space must be listed on the entry permit.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "How long must a canceled entry permit be retained after work in the space is complete?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "6 months",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "1 year",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "5 years",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Attendants of confined space entry operations must receive the same training as entrants.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "The attendant is the only entry team member who has the authority to call for the evacuation of a confined space.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
