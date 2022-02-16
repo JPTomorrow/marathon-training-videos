@@ -24,7 +24,7 @@ export const youtubeVideos = [
         "https://www.youtube.com/watch?v=L1YE4lr-7Vw",
         "https://www.youtube.com/watch?v=L1YE4lr-7Vw"),
     
-    new YoutubeVideoEntry("Electrical Contact Release",
+    new YoutubeVideoEntry("Electrical Shock & Contact Release",
         "This video explores the methods of rescueing someone who has come into contact with electricity.",
         "https://www.youtube.com/watch?v=GyT3eAsweIo",
         "https://www.youtube.com/watch?v=GyT3eAsweIo"),

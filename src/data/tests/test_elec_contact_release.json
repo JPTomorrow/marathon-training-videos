@@ -1,0 +1,179 @@
+{
+  "Title": "Electrical Shock & Contact Release",
+  "English": {
+    "Questions": [
+      {
+        "Text": "Without immediate assistance gaining release, shock victims could have a fatal outcome.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which of the following make good conductors?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Aluminium",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Copper",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Steel",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "D",
+            "AnswerText": "Water",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "E",
+            "AnswerText": "All of the above",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "In normal conditions, the average human body has approximately 5,000 Ohms of resistance.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "When a person receives an electric shock in the range of _____ milliamps, they may experience a loss of muscle control.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "1-2",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "7-9",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "35-50",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "D",
+            "AnswerText": "10-25",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Electrical workers consider voltages of 600 volts or less to be Low Voltage.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "All shock victims are still able to talk and respond to questions.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "The best way to dislodge a victim of electric shock is using a non-conductive object and avoiding direct contact at all times.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "An extension cord is a non-conductive object that can be used to pull a shock victim clear of an energized circuit.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "In some cases, a shock victim can be exposed to an arc flash and should use the “stop, drop and roll” method if their clothing is on fire.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
