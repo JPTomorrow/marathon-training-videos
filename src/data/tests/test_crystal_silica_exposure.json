@@ -1,0 +1,195 @@
+{
+  "Title": "Crystalline Silica Exposure Training",
+  "English": {
+    "Questions": [
+      {
+        "Text": "Silica dust can be so small that it cannot be seen with the naked eye?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which type of silicosis occurs after many years of low to moderate exposure of silica dust?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Acute silicosis",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Complicated silicosis",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Chronic silicosis",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "OSHA has set the permissible exposure limit, often called the \"PEL\", of crystalline silica to be ___________ of respirable cryystalline silica per cubic meter of air avaraged over an eight-hour work day.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "25 micrograms",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "50 micrograms",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "100 micrograms",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "OSHA's __________ standard specifically requires a competent person to be assigned to implement a written silica exposure control plan.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Construction",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "General industry",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Maritime operation",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "_____________ is the placement of barriers around a work area to restrict silica dust from spreading throughout a workplace.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Substitution",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Isolation",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Dust suppression",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Work practice controls refer to actions taken by your employer to reduce exposure to silica dust.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "You should avoid using compressed air to remove build ups of silica dust.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Your organization is only required to have a written respiratory program if it conducts sandblasting operations or other job tasks that require positive pressure respirators or other specialized equipment.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "If you use a filter-type respirator as protection against silica dust, it should have an assigned protection factor of at least _____________.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "10",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "50",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "100",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Marathon Electrical Contractors reserves the right to require any employee to submit to a drug or alcohol test at any time.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}

@@ -64,13 +64,16 @@ export class TrainingFormTestResult {
     }
 }
 
+// tests imports
 import test1 from '@/data/tests/test_new_hire_ob.json';
+import test2 from '@/data/tests/test_crystal_silica_exposure.json';
 export class MarathonTrainingTestFormService {
     Tests: Test[];
 
     constructor() {
         this.Tests = [];
         this.Tests.push(test1);
+        this.Tests.push(test2);
     }
 
     // returns default value test result if invalid test.

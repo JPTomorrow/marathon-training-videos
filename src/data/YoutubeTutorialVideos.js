@@ -19,7 +19,7 @@ export const youtubeVideos = [
         "https://www.youtube.com/watch?v=Qj5PkIrmHoQ",
         "https://www.youtube.com/watch?v=Qj5PkIrmHoQ"),
     
-    new YoutubeVideoEntry("Crystalline Silica Training",
+    new YoutubeVideoEntry("Crystalline Silica Exposure Training",
         "Crystalline Silica exposure is a common problem in the workplace that this training video will address.",
         "https://www.youtube.com/watch?v=L1YE4lr-7Vw",
         "https://www.youtube.com/watch?v=L1YE4lr-7Vw"),
