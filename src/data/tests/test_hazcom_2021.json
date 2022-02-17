@@ -1,0 +1,184 @@
+{
+  "Title": "HAZCOM 2021",
+  "English": {
+    "Questions": [
+      {
+        "Text": "The reference guide titled, “A Guide to the Globally Harmonized System of Classification and Labeling of Chemicals”, is commonly known as the ________________.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Blue Book",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Red Book",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Purple Book",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "It is not necessary for workers to understand the specific elements of the system used to communicate the hazards of the chemicals in their workplace.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "There are ____________ of health hazards.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "5 classes",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "10 classes",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "16 classes",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "The container label should be your ___________ source of information about the hazards and characteristics of a specific chemical or substance.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "First",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Last",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "The signal word _____________ is used to represent more severe hazards.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Danger",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Warning",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "“Wear protective gloves” is an example of the _______________ type of precautionary statement.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "General",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Prevention",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Response",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "The ________________ pictogram is the only pictogram used to represent both a physical hazard and a health hazard.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Exploding bomb",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Corrosion",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Gas cylinder",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Safety Data Sheets have a uniform format in which information is presented in __________ that appear in a specific order.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "8 sections",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "12 sections",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "16 sections",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "_____________ of a Safety Data Sheet provides information on Spill Response.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Section 4",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Section 6",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Section 8",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
