@@ -72,6 +72,7 @@ import test4 from '@/data/tests/test_safety_confined_spaces.json';
 import test5 from '@/data/tests/test_fire_extinguisher_basic_training.json';
 import test6 from '@/data/tests/test_hazcom_2021.json';
 import test7 from '@/data/tests/test_hearing_conservation.json';
+import test8 from '@/data/tests/test_ladder_safety.json';
 
 export class MarathonTrainingTestFormService {
     Tests: Test[];
@@ -85,6 +86,7 @@ export class MarathonTrainingTestFormService {
         this.Tests.push(test5);
         this.Tests.push(test6);
         this.Tests.push(test7);
+        this.Tests.push(test8);
     }
 
     // returns default value test result if invalid test.

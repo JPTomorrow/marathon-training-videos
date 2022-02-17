@@ -1,0 +1,153 @@
+{
+  "Title": "Ladder Safety - Safety Time",
+  "English": {
+    "Questions": [
+      {
+        "Text": "The most common material used in the construction of ladders is ________________________",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "aluminium",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "fiberglass",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Wood",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which type of ladder is rated for just 200 pounds and is not recommended for industrial or commerscial operations>",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Type Ir",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Type II",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Type III",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "A step ladder should be carried to your destination in the __________ position.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Closed",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Open",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "If a straight ladder contacts a wall at a height of 12 feet, the feet of the ladder should be placed _______ feet from the wall.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "2",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "3",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "6",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "More than half of all ladder fall victims are holding objects with one or both hands when they fall.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "You should only lean out beyond the side rails when working on a ladder when it is equipped with a stabilizing bar or other attachment that increases stability.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "When using a multi-use ladder on stairs, the short end of the ladder should always be placed on the floor or landing area.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "You should never attempt t otie two ladders together to gain additional height.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
