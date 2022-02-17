@@ -1,0 +1,163 @@
+{
+  "Title": "Hearing Conservation",
+  "English": {
+    "Questions": [
+      {
+        "Text": "Damaged cilia in the ear do not repair themselves and we cannot grow more.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "OSHA requires a hearing conservation program be established when sound levels average _______ decibels over an eight-hour time-weighted period.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "65",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "85",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "105",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "A standard threshold shift has occurred when a hearing test indicates hearing loss of at least five decibels when compared to an employee’s baseline audiogram.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "According to the OSHA Noise Exposure Standard, the maximum permissible noise exposure for sound levels at 97 decibels is ____________ hours.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "3",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "6",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "8",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Hearing protection devices with higher noise reduction ratings offer less protection than those with lower ratings.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "“_________________ ear plugs do not require compression when you insert then into your ear.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Disposable",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Reusable",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "In extremely noisy environments, you may be required to wear both ear plugs and ear muffs.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which of the following is a symptom of hearing loss?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Having difficulty understanding what others are saying",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Increasing the volume of your television to levels uncomfortable to others",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Having trouble hearing in high-frequency ranges",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "D",
+            "AnswerText": "All of the above",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "E",
+            "AnswerText": "None of the above",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
