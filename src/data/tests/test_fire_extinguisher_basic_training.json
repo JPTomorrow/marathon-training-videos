@@ -1,0 +1,142 @@
+{
+  "Title": "Fire Extinguisher Basic Training",
+  "English": {
+    "Questions": [
+      {
+        "Text": "Which class of fires involves energized electrical equipment?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Type A",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Type B",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Type C",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Which chemical compound is used as an extinguishing agent in Class K extinguishers?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "sodium chloride",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Potassium acetate",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Cabon dioxide",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "Smoke from any type of fire kills more people than the actual fire.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "If a fire is in its incipient stage, you should start fighting it immidiately and then sound the alarm or call 911 when it is fully extinguished.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "How far should you be standing from a fire when you begin to extinguish a fire?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "2-3 feet",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "6-10 feet",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "12-15 feet",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "How often should you check the condition of a fire extinguisher that is placed outdoors?",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "Daily",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "Monthly",
+            "IsCorrect": false
+          },
+          {
+            "Letter": "C",
+            "AnswerText": "Weekly",
+            "IsCorrect": true
+          }
+        ],
+        "SelectedAnswer": ""
+      },
+      {
+        "Text": "You should never test a fire extinguisher to see if it is working.",
+        "Answers": [
+          {
+            "Letter": "A",
+            "AnswerText": "True",
+            "IsCorrect": true
+          },
+          {
+            "Letter": "B",
+            "AnswerText": "False",
+            "IsCorrect": false
+          }
+        ],
+        "SelectedAnswer": ""
+      }
+    ]
+  },
+  "Spanish": {
+    "Questions": []
+  }
+}
